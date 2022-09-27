@@ -22,7 +22,8 @@ router.get('/movies', (req, res, next) => {
     let {id} = req.params
     MovieModel.findById(id)
         .then((movie) => {
-          res.render('details.hbs', {movie})
+          console.log(movie.stars)
+          res.render('movie/details.hbs', {movie})
       })
       .catch((err) => {
         console.log('Some error in finding', err)

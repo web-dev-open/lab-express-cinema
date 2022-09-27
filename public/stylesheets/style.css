@@ -14,7 +14,7 @@ a {
   justify-content: space-evenly;
   text-align: center;
   align-items: center;
-  margin: 30px;
+ margin: 100px;
   
   
 }
@@ -23,4 +23,12 @@ img {
   width: 300px;
   height: 400px;
 
+}
+
+.showtime {
+  display: flex;
+}
+
+.movieOne {
+  margin: 30px;
 }
