@@ -1,3 +1,9 @@
+require ('../db')
+
+const mongoose = require('mongoose')
+
+const movieModel = require('../models/Movies.model')
+
 const movies = [
     {
       title: "A Wrinkle in Time",
@@ -87,3 +93,13 @@ const movies = [
   
 
 // ... your code here
+
+movieModel.create(movies)
+.then((result) => {
+  console.log('Success!')
+}).catch((err) => {
+  console.log('Failed!',err)
+})
+.finally(() => {
+  mongoose.connection.close();
+})
