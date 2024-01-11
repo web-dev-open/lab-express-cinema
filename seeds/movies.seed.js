@@ -1,3 +1,8 @@
+// Connect to your DB
+require('../db')
+const mongoose = require('mongoose')
+
+
 const movies = [
     {
       title: "A Wrinkle in Time",
@@ -87,3 +92,14 @@ const movies = [
   
 
 // ... your code here
+
+let MovieModel = require('../models/Movie.model')
+MovieModel.create(movies)
+    .then(() => {
+        console.log('Data added')
+        mongoose.connection.close();
+    })
+    .catch(() => {
+        console.log('Error while adding data')
+    })
+
