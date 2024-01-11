@@ -4,5 +4,32 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  align-content: space-evenly;
+
+  /* or inline-flex */
+}
+
+.center {
+  text-align: center;
+}
+
+.container img {
+  margin: 40px 70px 0 70px;
+}
+
+.containerMovie {
+  display: flex;
+}
+
+.containerMovie img {
+  float: left;
+  margin: 0px 60px 0 20px;
 }
