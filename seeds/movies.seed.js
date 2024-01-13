@@ -87,3 +87,6 @@ const movies = [
   
 
 // ... your code here
+
+
+module.exports   =  movies
