@@ -1,8 +1,42 @@
-body {
+body{
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
-
-a {
+a{
   color: #00B7FF;
+}
+.container{
+  display:flex;
+  width:100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.box{
+  width:250px;
+  height:350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:30px 15px;
+}
+.movieBox{
+  width:200px;
+  height:300px;
+  text-align: center;
+}
+.movieBox img:hover{
+  transform: scale(1.08,1.08);
+  transition: 0.2s ease-in-out;
+  box-shadow: 2px 2px 4pc rgb(92, 93, 91);
+}
+
+.movieBox img{
+  width: 100%;
+}
+.movieBox h3,a{
+  margin:15px;
+}
+
+.mvBox{
+  
 }

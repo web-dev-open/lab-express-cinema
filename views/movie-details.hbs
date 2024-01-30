@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div class="mvBox">
+        <img src={{movie.image}} alt="movie_poster">
+        <h2>{{movie.title}}</h2>
+        <h3>Directed by : {{movie.director}}</h3>
+        <h3>Star cast : </h3>
+        <ul>
+           {{#each movie.stars}}
+            <li>{{this}}</li>
+           {{/each}}
+        </ul>
+
+
+        <p>Description : {{movie.description}}</p>
+        <h3>Showtimes :</h3>
+        <ul>
+           {{#each movie.stars}}
+               <li>{{this}}</li>
+           {{/each}}
+        </ul>
+
+        <a href="/movies">Go back</a>
+        </div>
+</body>
+</html>
