@@ -1,3 +1,7 @@
+require('./../db/index')
+
+const Movie = require('../models/Movie.model')
+
 const movies = [
     {
       title: "A Wrinkle in Time",
@@ -79,11 +83,30 @@ const movies = [
         "Ballerina Dominika Egorova is recruited to 'Sparrow School,' a Russian intelligence service where she is forced to use her body as a weapon. Her first mission, targeting a C.I.A. agent, threatens to unravel the security of both nations.",
       showtimes: ["13:00", "15:30", "18:00", "20:10", "22:40"]
     }
-  ];
+];
 
+// Movie
+//     .deleteMany()
+//     .then( () => Movie.create({
+//         title: "A Wrinkle in Time",
+//         director: "Ava DuVernay",
+//         stars: ["Storm Reid", "Oprah Winfrey", "Reese Witherspoon"],
+//         image:
+//           "https://images-na.ssl-images-amazon.com/images/M/MV5BMjMxNjQ5MTI3MV5BMl5BanBnXkFtZTgwMjQ2MTAyNDM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+//         description:
+//           "Following the discovery of a new form of space travel as well as Meg's father's disappearance, she, her brother, and her friend must join three magical beings - Mrs. Whatsit, Mrs. Who, and Mrs. Which - to travel across the universe to rescue him from a terrible evil.",
+//         showtimes: ["13:00", "15:30", "18:00", "20:10", "22:40"]
+//       }))    
+//     .then( movies => console.log(`${movies.length + ' movies' || 1} movies were created`))
+//     .catch( err => console.log(`Inserting the movies in the DB returned an error: ${err}`))
 
-// Add here the script that will be run to actually seed the database (feel free to refer to the previous lesson)
+// Movie
+//     .create(movies)
+//     .then( movies => console.log(`${movies.length} movies were created`))
+//     .catch( err => console.log(`Inserting the movies in the DB returned an error: ${err}`))
 
+Movie.deleteMany()
+	.then(() => Movie.create(movies))
+	.then( movies => console.log(`${movies.length} movies were created`))
+	.catch((error) => console.log(`Inserting the movies in the DB returned an error: ${err}`));
   
-
-// ... your code here

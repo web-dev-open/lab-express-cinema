@@ -1,0 +1,30 @@
+<h2>Welcome to our cinema!</h2>
+<h4>Pick a movie and click on it to see the available showtimes.</h4>
+
+<div class="row">
+{{#each movies}}
+    <div class="col-sm-6 col-md-4 col-xl-3">
+        <div class="card">
+            <img src="{{this.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{title}}</h5>
+                {{!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> --}}
+                <a href="/movies/{{id}}" class="btn btn-primary">See more</a>
+            </div>
+        </div>
+    </div>
+{{/each}}
+</div>
+<a href="/" class="btn btn-dark">Back to start</a>
+
+
+{{!-- 
+//         title: "A Wrinkle in Time",
+//         director: "Ava DuVernay",
+//         stars: ["Storm Reid", "Oprah Winfrey", "Reese Witherspoon"],
+//         image:
+//           "https://images-na.ssl-images-amazon.com/images/M/MV5BMjMxNjQ5MTI3MV5BMl5BanBnXkFtZTgwMjQ2MTAyNDM@._V1_UX182_CR0,0,182,268_AL_.jpg",
+//         description:
+//           "Following the discovery of a new form of space travel as well as Meg's father's disappearance, she, her brother, and her friend must join three magical beings - Mrs. Whatsit, Mrs. Who, and Mrs. Which - to travel across the universe to rescue him from a terrible evil.",
+//         showtimes: ["13:00", "15:30", "18:00", "20:10", "22:40"]
+ --}}
