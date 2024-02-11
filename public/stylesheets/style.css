@@ -1,8 +1,50 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body, h1, h2, img {
+  margin: 0;
+  padding: 0;
 }
 
-a {
-  color: #00B7FF;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.movie {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.movie img {
+  max-width: 100%;
+  height: auto;
+}
+
+.movie h2 {
+  margin-top: 10px;
+}
+
+.movie .button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.movie .button:hover {
+  background-color: #0056b3;
 }

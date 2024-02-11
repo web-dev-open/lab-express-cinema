@@ -1,3 +1,7 @@
+const mongoose = require('mongoose');
+const Movie = require('../models/Movie.model');
+
+
 const movies = [
     {
       title: "A Wrinkle in Time",
@@ -87,3 +91,21 @@ const movies = [
   
 
 // ... your code here
+mongoose.connect('mongodb://localhost:27017/lab-express-cinema', { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log('Connected to MongoDB');
+
+        Movie.create(movies)
+            .then((createdMovies) => {
+                console.log(`${createdMovies.length} movies have been created`);
+            })
+            .catch((error) => {
+                console.error('Error seeding database:', error);
+            })
+            .finally(() => {
+                mongoose.connection.close();
+            });
+    })
+    .catch((error) => {
+        console.error('Error connecting to MongoDB:', error);
+    });
