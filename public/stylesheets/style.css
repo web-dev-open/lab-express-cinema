@@ -6,3 +6,42 @@ body {
 a {
   color: #00B7FF;
 }
+
+.movie{
+  border: 1px solid black;
+}
+
+.container img{
+  width: 100%;
+  
+}
+
+/* style.css */
+
+/* Center align the content */
+.container {
+  margin-top: 50px;
+}
+
+/* Style individual movie items */
+.movie {
+  margin-bottom: 20px;
+}
+
+.movie img {
+  width: 100%;
+  height: auto;
+}
+
+.movie h2 {
+  margin-top: 10px;
+}
+
+.movie p {
+  margin-bottom: 10px;
+}
+
+/* Add spacing between columns */
+.col {
+  padding: 0 15px;
+}
